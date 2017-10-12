@@ -16,6 +16,7 @@
         //1.注意要带反斜杠,这是AFN要求的,避免错误
         NSURL *url = [NSURL URLWithString:@"http://c.m.163.com/nc/article/list/"];
         instance = [[self alloc]initWithBaseURL:url];
+        instance.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
     });
     return instance;
 }
