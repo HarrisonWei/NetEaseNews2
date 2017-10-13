@@ -17,6 +17,9 @@
 @property (nonatomic,assign)int replyCount;
 //4.配图地址
 @property (nonatomic,copy)NSString *imgsrc;
+
+@property (nonatomic,copy)NSString *haha;
+@property (nonatomic,copy)NSString *xixi;
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)newsWithDict:(NSDictionary *)dict;
 
