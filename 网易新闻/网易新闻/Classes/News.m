@@ -91,7 +91,7 @@ const char *KPropertisKey = "propertisKey";
 
 
 
-+ (void)loadNewsListWithUrlString:(NSString *)urlString{
++ (void)loadNewsListWithUrlString:(NSString *)urlString finished:(void (^)(NSArray *))finished{
     [[NetworkTools sharedNetworkTools] GET:urlString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * responseObject) {
         NSLog(@"%@",responseObject.keyEnumerator.nextObject);
@@ -104,7 +104,7 @@ const char *KPropertisKey = "propertisKey";
             News *news = [News newsWithDict:obj];
             [nmArray addObject:news];
         }];
-        NSLog(@"%@",nmArray);
+        finished(nmArray.copy);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
     }];

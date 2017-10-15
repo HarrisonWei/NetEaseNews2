@@ -11,18 +11,18 @@
 @interface News : NSObject
 //1.新闻标题
 @property (nonatomic,copy)NSString *title;
-//2.新闻摘要
-@property (nonatomic,copy)NSString *digest;
+//2.新闻来源
+@property (nonatomic,copy)NSString *source;
 //3.跟帖数量
 @property (nonatomic,assign)int replyCount;
 //4.配图地址
 @property (nonatomic,copy)NSString *imgsrc;
+//5.多图数组(两张图)
+@property (nonatomic,strong)NSArray *imgextra;
 
-@property (nonatomic,copy)NSString *haha;
-@property (nonatomic,copy)NSString *xixi;
 - (instancetype)initWithDict:(NSDictionary *)dict;
 + (instancetype)newsWithDict:(NSDictionary *)dict;
 
 //网络请求的方法
-+ (void)loadNewsListWithUrlString:(NSString *)urlString;
++ (void)loadNewsListWithUrlString:(NSString *)urlString finished:(void(^)(NSArray *newsList))finished;
 @end
