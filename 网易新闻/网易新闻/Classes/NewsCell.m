@@ -47,6 +47,8 @@
 + (NSString *)cellForIdentifier:(News *)news{
     if (news.imgextra.count == 2) {
         return @"ImagesCell";
+    }else if (news.isBigImage){
+        return @"BigImageCell";
     }else{
         return @"NewsCell";
     }

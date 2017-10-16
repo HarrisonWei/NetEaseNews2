@@ -20,8 +20,11 @@
 //5.多图数组(两张图)
 @property (nonatomic,strong)NSArray *imgextra;
 
-- (instancetype)initWithDict:(NSDictionary *)dict;
-+ (instancetype)newsWithDict:(NSDictionary *)dict;
+@property (nonatomic,assign,getter=isBigImage) BOOL imgType;
+
+
+
+
 
 //网络请求的方法
 + (void)loadNewsListWithUrlString:(NSString *)urlString finished:(void(^)(NSArray *newsList))finished;

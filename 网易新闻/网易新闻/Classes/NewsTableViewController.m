@@ -22,6 +22,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //设置预估行高
     self.tableView.estimatedRowHeight = 130;
     //自适应行高
     self.tableView.rowHeight = UITableViewAutomaticDimension;
@@ -29,10 +30,9 @@
     //测试加载新闻
     
     __weak typeof(self) weakSelf = self;
-    [News loadNewsListWithUrlString:@"T1348648517839/0-20.html" finished:^(NSArray *newsList) {
+    [News loadNewsListWithUrlString:@"T1370583240249/0-20.html" finished:^(NSArray *newsList) {
         weakSelf.dataArray = newsList;
     }];
-    //设置预估行高
     
     
     

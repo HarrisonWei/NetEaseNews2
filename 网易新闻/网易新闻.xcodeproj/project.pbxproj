@@ -11,6 +11,9 @@
 		61630A7A1F8F89BD00026CE7 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 61630A791F8F89BD00026CE7 /* News.m */; };
 		61630A7E1F8FA69800026CE7 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 61630A7D1F8FA69800026CE7 /* NSArray+Log.m */; };
 		61630A811F92275C00026CE7 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 61630A801F92275C00026CE7 /* NewsCell.m */; };
+		61630A851F94BFA700026CE7 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 61630A841F94BFA700026CE7 /* topic_news.json */; };
+		61630A881F94BFB700026CE7 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61630A871F94BFB700026CE7 /* Channel.m */; };
+		61630A8B1F94C51800026CE7 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 61630A8A1F94C51800026CE7 /* NSObject+Extension.m */; };
 		61AE5D231F85E9B90097686D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AE5D221F85E9B90097686D /* main.m */; };
 		61AE5D261F85E9B90097686D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AE5D251F85E9B90097686D /* AppDelegate.m */; };
 		61AE5D2E1F85E9B90097686D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AE5D2D1F85E9B90097686D /* Assets.xcassets */; };
@@ -31,6 +34,11 @@
 		61630A7D1F8FA69800026CE7 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		61630A7F1F92275C00026CE7 /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
 		61630A801F92275C00026CE7 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		61630A841F94BFA700026CE7 /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		61630A861F94BFB700026CE7 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
+		61630A871F94BFB700026CE7 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
+		61630A891F94C51800026CE7 /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		61630A8A1F94C51800026CE7 /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
 		61AE5D1E1F85E9B90097686D /* 网易新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "网易新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AE5D221F85E9B90097686D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		61AE5D241F85E9B90097686D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +71,24 @@
 				61630A7D1F8FA69800026CE7 /* NSArray+Log.m */,
 			);
 			path = Log;
+			sourceTree = "<group>";
+		};
+		61630A821F94BF0A00026CE7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				61630A831F94BF0A00026CE7 /* Channel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		61630A831F94BF0A00026CE7 /* Channel */ = {
+			isa = PBXGroup;
+			children = (
+				61630A841F94BFA700026CE7 /* topic_news.json */,
+				61630A861F94BFB700026CE7 /* Channel.h */,
+				61630A871F94BFB700026CE7 /* Channel.m */,
+			);
+			path = Channel;
 			sourceTree = "<group>";
 		};
 		61AE5D151F85E9B90097686D = {
@@ -109,6 +135,7 @@
 		61AE5D381F85EA8C0097686D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				61630A821F94BF0A00026CE7 /* Home */,
 				61AE5D3D1F85EABB0097686D /* News.storyboard */,
 				61AE5D3A1F85EAAD0097686D /* NewsTableViewController.h */,
 				61AE5D3B1F85EAAD0097686D /* NewsTableViewController.m */,
@@ -126,6 +153,8 @@
 			children = (
 				61630A751F8F6D0100026CE7 /* NetworkTools.h */,
 				61630A761F8F6D0100026CE7 /* NetworkTools.m */,
+				61630A891F94C51800026CE7 /* NSObject+Extension.h */,
+				61630A8A1F94C51800026CE7 /* NSObject+Extension.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -211,6 +240,7 @@
 			files = (
 				61AE5D311F85E9B90097686D /* LaunchScreen.storyboard in Resources */,
 				61AE5D3E1F85EABB0097686D /* News.storyboard in Resources */,
+				61630A851F94BFA700026CE7 /* topic_news.json in Resources */,
 				61AE5D2E1F85E9B90097686D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,9 +305,11 @@
 			files = (
 				61630A7A1F8F89BD00026CE7 /* News.m in Sources */,
 				61630A771F8F6D0100026CE7 /* NetworkTools.m in Sources */,
+				61630A8B1F94C51800026CE7 /* NSObject+Extension.m in Sources */,
 				61AE5D3C1F85EAAD0097686D /* NewsTableViewController.m in Sources */,
 				61630A811F92275C00026CE7 /* NewsCell.m in Sources */,
 				61630A7E1F8FA69800026CE7 /* NSArray+Log.m in Sources */,
+				61630A881F94BFB700026CE7 /* Channel.m in Sources */,
 				61AE5D261F85E9B90097686D /* AppDelegate.m in Sources */,
 				61AE5D231F85E9B90097686D /* main.m in Sources */,
 			);
