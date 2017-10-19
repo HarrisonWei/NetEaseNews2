@@ -31,7 +31,11 @@
     for (NSDictionary *dic in array) {
         [nmArray addObject:[self objcWithDict:dic]];
     }
-    return nmArray.copy;
+    //根据tid的大小频道数据排序
+    
+    return [nmArray sortedArrayUsingComparator:^NSComparisonResult(Channel *obj1, Channel *obj2) {
+        return [obj1.tid compare:obj2.tid];
+    }];
     
 }
 #pragma mark -- description不要抽取出来,容易死循环
