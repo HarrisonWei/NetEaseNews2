@@ -31,8 +31,8 @@
         NSMutableArray *nmArray = [NSMutableArray array];
         [array enumerateObjectsUsingBlock:^(NSDictionary *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             //字典转模型
-            News *news = [News newsWithDict:obj];
-            [nmArray addObject:news];
+            
+            [nmArray addObject:[self objcWithDict:obj]];
         }];
         finished(nmArray.copy);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

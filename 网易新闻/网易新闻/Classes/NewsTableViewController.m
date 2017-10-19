@@ -20,6 +20,17 @@
     _dataArray = dataArray;
     [self.tableView reloadData];
 }
+- (void)setUrlString:(NSString *)urlString{
+    _urlString = urlString;
+    //测试加载新闻
+    
+    __weak typeof(self) weakSelf = self;
+    [News loadNewsListWithUrlString:urlString finished:^(NSArray *newsList) {
+        weakSelf.dataArray = newsList;
+    }];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     //设置预估行高
@@ -27,12 +38,7 @@
     //自适应行高
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
-    //测试加载新闻
     
-    __weak typeof(self) weakSelf = self;
-    [News loadNewsListWithUrlString:@"T1370583240249/0-20.html" finished:^(NSArray *newsList) {
-        weakSelf.dataArray = newsList;
-    }];
     
     
     

@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (Extension)
-+ (instancetype)newsWithDict:(NSDictionary *)dict;
++ (instancetype)objcWithDict:(NSDictionary *)dict;
 + (NSArray *)loadPropertis;
 @end

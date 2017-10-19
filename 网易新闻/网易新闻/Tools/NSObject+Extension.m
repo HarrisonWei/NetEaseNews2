@@ -11,10 +11,10 @@
 #import <objc/runtime.h>
 @implementation NSObject (Extension)
 #pragma mark -- 字典转模型
-+ (instancetype)newsWithDict:(NSDictionary *)dict{
-    News *news = [[News alloc]init];
-    [news setValuesForKeysWithDictionary:dict];
-    return news;
++ (instancetype)objcWithDict:(NSDictionary *)dict{
+    id obj = [[self alloc]init];
+    [obj setValuesForKeysWithDictionary:dict];
+    return obj;
 }
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key{}

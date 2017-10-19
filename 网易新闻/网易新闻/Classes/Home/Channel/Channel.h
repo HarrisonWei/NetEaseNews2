@@ -11,4 +11,8 @@
 @interface Channel : NSObject
 @property (nonatomic,copy)NSString *tname;
 @property (nonatomic,copy)NSString *tid;
+
+@property (nonatomic,copy)NSString *urlString;
+#pragma mark -- 加载频道数组
++ (NSArray *)channelList;
 @end

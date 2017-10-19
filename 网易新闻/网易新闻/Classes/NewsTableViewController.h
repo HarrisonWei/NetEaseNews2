@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface NewsTableViewController : UITableViewController
+@property (nonatomic,copy)NSString* urlString;
 
 @end
