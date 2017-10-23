@@ -21,6 +21,7 @@
     [self.tableView reloadData];
 }
 - (void)setUrlString:(NSString *)urlString{
+    self.dataArray = nil;
     _urlString = urlString;
     //测试加载新闻
     

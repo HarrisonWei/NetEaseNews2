@@ -26,6 +26,7 @@
     self.titleLabel.text = news.title;
     self.sourceLabel.text = news.source;
     self.replyLabel.text = [NSString stringWithFormat:@"%d跟帖",news.replyCount];
+    self.iconImage.image = nil;
     //设置图像,AFN设置图像不支持GIF,绝大部分还是用SDWebImage
     [self.iconImage setImageWithURL:[NSURL URLWithString:news.imgsrc]];
     //判断是否是多图
@@ -35,6 +36,8 @@
             //首先是取出数组中的字符串
             NSString *str = news.imgextra[index][@"imgsrc"];
             NSURL *url = [NSURL URLWithString:str];
+            //设置图像之前清空图像
+            iv.image = nil;
             //设置多图
             [iv setImageWithURL:url];
             
